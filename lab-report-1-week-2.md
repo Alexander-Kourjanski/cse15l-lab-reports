@@ -40,3 +40,5 @@ By typing "ssh-keygen", the computer generates a public and a private key, with 
 ## Optimizing Remote Running
 
 There are many ways on how to make remote running the best it can be for yourself. The best thing I can recommend is for to experiment with different ways to minimize the number of steps it takes for you to run your program. Here are some things to try out to get you started. One thing which I like to do with commands is to use the up and down arrows in the terminal if I want to run a command that I already put in the terminal. Another thing which I like to do is have a .txt file with different commands that I put into the terminal in case I need to open a new terminal.
+
+![Image](CommandsFile.PNG)
