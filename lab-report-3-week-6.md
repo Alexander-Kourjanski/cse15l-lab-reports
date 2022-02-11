@@ -5,4 +5,16 @@ One nice thing that the command line can do is copy an entire directory into a r
 ![Image](CopyingMarkdownParse.PNG)
 ![Image](CopyingMarkdownParse2.PNG)
 
+From just 1 line in the terminal, all of these files can be copied. We can then run these files in the remote servers as seen below.
+
 ![Image](LoggingInRemotelyWithRepo.PNG)
+![Image](RunningMarkdownParseRemotely.PNG)
+
+It is necessary after logging in into the remote server, to access the directory with cd. Afterwords, it is possible to run the tests in markdown-parse.
+
+By using the semicolon in the terminal, it is possible to run multiple commands in one line. However, the minimum number of lines required to run the tests remotely is 2. 
+
+![Image](RunningMarkdownParseRemotelyOptimized1.PNG)
+![Image](RunningMarkdownParseRemotelyOptimized2.PNG)
+
+As you can see here, the scp and ssh commands run after the first line, but the last 3 do not. This is because the last 3 are commands that run on the remote server, so they have to be done separately. A way to optimize it can be scene in the last image where the 3 commands are separated by semicolons.
