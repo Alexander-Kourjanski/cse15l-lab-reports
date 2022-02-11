@@ -17,4 +17,4 @@ By using the semicolon in the terminal, it is possible to run multiple commands 
 ![Image](RunningMarkdownParseRemotelyOptimized1.PNG)
 ![Image](RunningMarkdownParseRemotelyOptimized2.PNG)
 
-As you can see here, the scp and ssh commands run after the first line, but the last 3 do not. This is because the last 3 are commands that run on the remote server, so they have to be done separately. A way to optimize it can be scene in the last image where the 3 commands are separated by semicolons.
+As you can see here, the scp and ssh commands run after the first line, but the last 3 do not. This is because the last 3 are commands that run on the remote server while the first 2 are done on this computer, so they have to be done separately. A way to optimize it can be seen in the last image where the 3 commands are separated by semicolons.
