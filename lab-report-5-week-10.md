@@ -8,7 +8,7 @@ When reading the output of this command, there is a number that is associated wi
 
 ![Image](212MarkdownOutputs.PNG)
 
-The number is the line in the file where this difference occurs. By using the command `cat -n`, we can find the line in the results file, and the line above it is the test case that gave the different results for the two implementations. A part of the command looks like
+The number is the line in the file where this difference occurs. By using the command `cat -n file | less`, we can find the line in the results file, and the line above it is the test case that gave the different results for the two implementations. A part of the command looks like
 
 ![Image](FindingFilename.PNG)
 
@@ -60,4 +60,4 @@ The Markdown code should take one link and that link should be "bar*" according 
 
 ![Image](MyMarkdownParse.PNG)
 
-The getLinks method does not have any place in the code that leaves out quotes, slashes, and backslashes. There should be code added that does this, then trim the string. Only after all this is done should the link be added to toReturn.
+The getLinks method does not have any place in the code that leaves out quotes, slashes, and backslashes. There should be code added that does this, then trim the string. Only after all this is done should the link be added to toReturn. Currently, my code only thinks of the link as what is inside the parenthesis, and that is the problem that needs to be solved. There are many characters that have uses and should be hidden unless specified otherwise.
