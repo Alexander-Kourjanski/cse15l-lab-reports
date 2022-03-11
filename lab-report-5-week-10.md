@@ -9,3 +9,6 @@ The first file that we are going to be talking about where the implementations g
 ![Image](212MarkdownCode.PNG)
 
 Since there are no links that follow the proper bracket and parenthesis format, that means there should be no links taken, however, we end up with this from diff.
+
+![Image](212MarkdownOutputs.PNG)
+
