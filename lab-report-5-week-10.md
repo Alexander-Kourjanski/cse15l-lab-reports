@@ -28,7 +28,8 @@ As you can see, there is one link that is in the file, and the link itself that 
 
 ![Image](194Link.PNG)
 
-Let us look at the week 9 implementation of Markdown Parse.
+
+This means that neither implementation is correct since neither of them had the output of a list with a length of one, only containing "my_(url)". Let us look at the week 9 implementation of Markdown Parse.
 
 ![Image](Markdown194Testcasefix.PNG)
 
@@ -40,7 +41,7 @@ Another difference was found on line 270 of the results file.
 
 ![Image](270LineDiff.PNG)
 
-When using cat, we found out that this has to do with the 22nd test file.
+When using `cat`, we found out that this has to do with the 22nd test file.
 
 ![Image](22FileFound.PNG)
 
