@@ -18,12 +18,46 @@ In this example, the test file we would look at is test file 194, and this will 
 
 The first file that we are going to be talking about where the implementations gave two different results is with 194.md. The file itself looks like this
 
-![Image](212MarkdownCode.PNG)
+![Image](194MarkdownCode.PNG)
 
-Since there are no links that follow the proper bracket and parenthesis format, that means there should be no links taken, however, we end up with this from diff.
+This is the expected output of this file
 
-![Image](212MarkdownOutputs.PNG)
+![Image](194MarkdownExpected.PNG)
 
-The output of my Markdown Parse is an empty list, but the other implementation contains url in the output. There is no link within parenthesis in the code, so the expected output should be an empty list, so the implementation given for week 9 is incorrect.
+As you can see, there is one link that is in the file, and the link itself that is used is "my_(url)". 
 
-## Difference 2: File
+![Image](194Link.PNG)
+
+Let us look at the week 9 implementation of Markdown Parse.
+
+![Image](Markdown194Testcasefix.PNG)
+
+In this implementation, there is no code dealing with a colon right after the brackets. The way to fix this will be to add a case for when there is a colon right after the nextCloseBracket. It will take the next set of characters until a space is found as the link. This does not have anything to do with parenthesis actually, and I did not even realize this was a proper link syntax of markdown that was available. Neither implementation had a case that had a colon right after nextCloseBracket in getLinks as seen above, so the problem is that neither program even thought of addressing this.
+
+## Difference 2: File 201.md
+
+Another difference was found on line 270 of the results file.
+
+![Image](270LineDiff.PNG)
+
+When using cat, we found out that this has to do with the 22nd test file.
+
+![Image](22FileFound.PNG)
+
+The markdown code looks like this,
+
+![Image](22MarkdownCode.PNG)
+
+and the markdown output looks like this.
+
+![Image](22ExpectedOutput.PNG)
+
+When clicking on the link "foo", we get
+
+![Image](22Link.PNG)
+
+The Markdown code should take one link and that link should be "bar*" according to the link we clicked from the expected output. From the image above, this means that neither implementation is correct. Let us look at my implementation of MarkdownParse.
+
+![Image](MyMarkdownParse.PNG)
+
+The getLinks method does not have any place in the code that leaves out quotes, slashes, and backslashes. There should be code added that does this, then trim the string. Only after all this is done should the link be added to toReturn.
