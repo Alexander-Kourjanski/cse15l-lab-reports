@@ -35,7 +35,7 @@ This means that neither implementation is correct since neither of them had the 
 
 In this implementation, there is no code dealing with a colon right after the brackets. The way to fix this will be to add a case for when there is a colon right after the nextCloseBracket. It will take the next set of characters until a space is found as the link. This does not have anything to do with parenthesis actually, and I did not even realize this was a proper link syntax of markdown that was available. Neither implementation had a case that had a colon right after nextCloseBracket in getLinks as seen above, so the problem is that neither program even thought of addressing this.
 
-## Difference 2: File 201.md
+## Difference 2: File 22.md
 
 Another difference was found on line 270 of the results file.
 
